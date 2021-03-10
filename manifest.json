@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Virtual Brain",
+  "description": "Redefining the way you use productivity applications",
+  "version": "1.0",
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": ["alarms"],
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'; connect-src 'self' wss://*.firebaseio.com;"
+}

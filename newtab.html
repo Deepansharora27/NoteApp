@@ -1,0 +1,92 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VirtualBrain Chrome Extension</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .icon {
+        height: auto;
+        width: auto;
+      }
+
+      html,
+      body {
+        height: 100%;
+        min-width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+      }
+
+      h1 {
+        font-family: "Barlow Semi Condensed", sans-serif;
+        font-weight: 900;
+      }
+
+      body {
+        background: #ffffff;
+        color: black;
+      }
+
+      div.main-app {
+        display: flex;
+        height: 100%;
+        background: #6b7280;
+        color: white;
+      }
+
+      aside.side-menu {
+        width: 300px;
+        height: 100%;
+        padding: 25px;
+        background: #d97706;
+      }
+
+      section.holder {
+        width: -webkit-fill-available;
+        height: 100%;
+        padding: 25px;
+      }
+
+      [contenteditable]:focus {
+        outline: 0px solid transparent;
+      }
+      [placeholder]:empty:before {
+        content: attr(placeholder);
+        color: white;
+        opacity: 0.5;
+        cursor: text;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-app">
+      <aside class="side-menu">
+        <div class="icon"><img src="icon.png" alt="" /></div>
+        <h1>Virtual Brain-With Dopamine Served</h1>
+        <div class="create-new-note">
+          <i class="fas fa-user-edit"></i>
+        </div>
+      </aside>
+      <!-- This is the main content part section of our application : -->
+      <section class="holder">
+        <div class="icon"></div>
+        <div class="action">
+          <!-- Adding Saving Notes and Deleting Notes Button Here:(Pending Task!!) -->
+        </div>
+        <h1 contenteditable="true" placeholder="Untitled"></h1>
+        <div
+          class="notes-body"
+          contenteditable="true"
+          placeholder="Write your First Note"
+        ></div>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
